@@ -1,0 +1,12 @@
+.backtoWhite{
+    -fx-background-color: black;
+
+}
+.backtoWhite:hover{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color:black;
+    -fx-border-width: 3 3 3 3;
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+}

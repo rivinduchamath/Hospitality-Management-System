@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="988.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.deppo.hotelManagement.controller.AddRoom">
+   <children>
+      <Label layoutX="377.0" layoutY="49.0" prefHeight="35.0" prefWidth="260.0" text="Room Management">
+         <font>
+            <Font name="Cambria Bold" size="28.0" />
+         </font>
+      </Label>
+      <ImageView id="imgReserVation" fitHeight="109.0" fitWidth="111.0" layoutX="45.0" layoutY="156.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/customers.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblNoOfRooms" layoutX="1641.0" layoutY="46.0" prefHeight="40.0" prefWidth="128.0" text="No Of Rooms:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="nrooms" layoutX="1761.0" layoutY="46.0" prefHeight="40.0" prefWidth="128.0" text="###########">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblSearchRoom" layoutX="29.0" layoutY="606.0" onMouseClicked="#tblCustomers_OnMouseClicked" prefHeight="366.0" prefWidth="1885.0">
+         <columns>
+            <TableColumn minWidth="0.0" prefWidth="161.0" text="RoomId" />
+            <TableColumn minWidth="0.0" prefWidth="728.0" text="Type" />
+            <TableColumn minWidth="0.0" prefWidth="175.0" text="Price" />
+            <TableColumn minWidth="0.0" prefWidth="164.0" text="Condition" />
+            <TableColumn minWidth="0.0" prefWidth="262.0" text="State" />
+            <TableColumn minWidth="0.0" prefWidth="136.0" text="Checked By" />
+            <TableColumn minWidth="0.0" prefWidth="212.0" text="Date" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <JFXButton id="btnAdd" fx:id="btnAdd" layoutX="672.0" layoutY="494.0" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="146.0" style="-fx-background-color: green;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="btnDelete" fx:id="btnDelete" layoutX="1150.0" layoutY="494.0" onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="146.0" style="-fx-background-color: #493b00;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="btnReset" fx:id="btnReset" layoutX="909.0" layoutY="494.0" onAction="#btnResetOnAction" prefHeight="40.0" prefWidth="146.0" style="-fx-background-color: #66650A;" text="Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField id="txtId" fx:id="txtRoomId" layoutX="377.0" layoutY="220.0" onAction="#txtCustomerIdOnAction" onMouseClicked="#searchGuestMouseClick" prefHeight="31.0" prefWidth="409.0" promptText="Room Id:">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField id="txtRatePrice" fx:id="txtType" labelFloat="true" layoutX="1083.0" layoutY="287.0" onAction="#txtTypeOnAction" prefHeight="31.0" prefWidth="409.0" promptText="Type :">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField id="txtId" fx:id="txtClean" layoutX="1083.0" layoutY="368.0" onAction="#txtCleanOnAction" onMouseClicked="#searchGuestMouseClick" prefHeight="31.0" prefWidth="409.0" promptText="Cleaned By:">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+      <ImageView id="IconHome" fitHeight="92.0" fitWidth="97.0" layoutX="50.0" layoutY="32.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView id="IconBanquet" fitHeight="75.0" fitWidth="92.0" layoutX="59.0" layoutY="368.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/wedding.png" />
+         </image>
+      </ImageView>
+      <ImageView id="iconMenu" fitHeight="92.0" fitWidth="84.0" layoutX="50.0" layoutY="488.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/food-menu-icon-3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView id="iconFoodAndBev" fitHeight="92.0" fitWidth="84.0" layoutX="54.0" layoutY="280.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/items.png" />
+         </image>
+      </ImageView>
+      <JFXComboBox fx:id="combostate" layoutX="377.0" layoutY="287.0" onAction="#combostateOnAction" prefHeight="31.0" prefWidth="409.0" promptText="Room State:" />
+      <JFXComboBox fx:id="comboCategory" layoutX="1083.0" layoutY="236.0" onAction="#roomCategoryOnAction" prefHeight="31.0" prefWidth="409.0" promptText="Catogory" />
+      <JFXTextField id="txtId" fx:id="txtPrice" layoutX="384.0" layoutY="428.0" onAction="#txtPriceOnAction" onMouseClicked="#searchGuestMouseClick" prefHeight="31.0" prefWidth="409.0" promptText="Price:">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField id="txtId" fx:id="currentDate" layoutX="384.0" layoutY="353.0" onAction="#txtCustomerIdOnAction" onMouseClicked="#searchGuestMouseClick" prefHeight="31.0" prefWidth="409.0" promptText="Room Id:">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+   </children>
+</AnchorPane>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="988.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.deppo.hotelManagement.controller.FoodAndBevarage">
+   <children>
+      <Label layoutX="740.0" layoutY="32.0" prefHeight="68.0" prefWidth="440.0" text="Food &amp; Bevarage">
+         <font>
+            <Font name="Cambria Bold" size="56.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtOrderId" labelFloat="true" layoutX="373.0" layoutY="180.0" onAction="#txtOrderIdOnAction" onMouseClicked="#SearchGuest" prefHeight="31.0" prefWidth="409.0" promptText="Enter Order Id:" style="-fx-font-weight: bold;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+      <ImageView id="imgReserVation" fitHeight="109.0" fitWidth="111.0" layoutX="45.0" layoutY="156.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/customers.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblItem" layoutX="29.0" layoutY="606.0" onMouseClicked="#tblMenu_OnMouseClicked" prefHeight="309.0" prefWidth="916.0">
+         <columns>
+            <TableColumn minWidth="0.0" prefWidth="143.0" text="Item Code" />
+            <TableColumn minWidth="0.0" prefWidth="183.0" text="QtyOnHand" />
+            <TableColumn minWidth="0.0" prefWidth="409.0" text="ItemDescription" />
+            <TableColumn minWidth="0.0" prefWidth="149.0" text="Unite Price" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <JFXButton id="btnAdd" fx:id="btnAdd" layoutX="887.0" layoutY="417.0" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="109.0" style="-fx-background-color: green;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="btnDelete" fx:id="btnDelete" layoutX="1165.0" layoutY="417.0" onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="109.0" style="-fx-background-color: #493b00;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="btnReset" fx:id="btnReset" layoutX="1026.0" layoutY="417.0" onAction="#btnResetOnAction" prefHeight="40.0" prefWidth="109.0" style="-fx-background-color: #66650A;" text="Reset" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField id="txtId" fx:id="txtCustomerId" layoutX="373.0" layoutY="240.0" onAction="#txtCustomerIdOnAction" onMouseClicked="#searchGuestMouseClick" prefHeight="31.0" prefWidth="409.0" promptText="Customer Id:" style="-fx-font-weight: bold;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField id="txtRatePrice" fx:id="txtQtyOnHand" labelFloat="true" layoutX="377.0" layoutY="366.0" onAction="#txtQtyOnHandOnAction" prefHeight="31.0" prefWidth="409.0" promptText="Qty On Hand:" style="-fx-font-weight: bold;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField id="txtId" fx:id="txtItemCode" layoutX="373.0" layoutY="302.0" onAction="#txtItemCodeOnAction" onMouseClicked="#searchGuestMouseClick" prefHeight="31.0" prefWidth="409.0" promptText="Item No:" style="-fx-font-weight: bold;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField id="txtRatePrice" fx:id="txtQty" labelFloat="true" layoutX="376.0" layoutY="421.0" onAction="#txtQtyOnAction" prefHeight="31.0" prefWidth="409.0" promptText="Qty:" style="-fx-font-weight: bold;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXDatePicker id="dateArival" fx:id="date" layoutX="877.0" layoutY="176.0" onAction="#dateOnAction" prefHeight="39.0" prefWidth="419.0" promptText="Date" style="-fx-font-weight: bold; -fx-font-size: 18px;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXDatePicker>
+      <JFXTextField id="txtId" fx:id="txtCustomerName" layoutX="876.0" layoutY="240.0" onAction="#txtCustomerNameOnAction" onMouseClicked="#searchGuestMouseClick" prefHeight="31.0" prefWidth="409.0" promptText="Customer Name:" style="-fx-font-weight: bold;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField id="txtId" fx:id="txtItemDes" layoutX="876.0" layoutY="302.0" onAction="#txtItemDesOnAction" onMouseClicked="#searchGuestMouseClick" prefHeight="31.0" prefWidth="409.0" promptText="Item Description:" style="-fx-font-weight: bold;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField id="txtId" fx:id="txtUnitePrice" layoutX="876.0" layoutY="366.0" onAction="#txtUnitePriceOnAction" onMouseClicked="#searchGuestMouseClick" prefHeight="31.0" prefWidth="409.0" promptText="Unite Price:" style="-fx-font-weight: bold;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXButton id="btnSubmit" fx:id="btnPlaceOrder" layoutX="1583.0" layoutY="924.0" onAction="#btnPlaceOrderOnAction" prefHeight="51.0" prefWidth="264.0" style="-fx-background-color: green;" text="PlaceOrder" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField id="txtId" fx:id="txtUnitePrice1" layoutX="125.0" layoutY="928.0" onAction="#txtUnitePriceOnAction" onMouseClicked="#searchGuestMouseClick" prefHeight="31.0" prefWidth="409.0" promptText="Total Price :">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXTextField>
+      <ImageView id="IconHome" fitHeight="92.0" fitWidth="97.0" layoutX="50.0" layoutY="32.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView id="IconBanquet" fitHeight="75.0" fitWidth="92.0" layoutX="59.0" layoutY="265.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/wedding.png" />
+         </image>
+      </ImageView>
+      <ImageView id="iconStore" fitHeight="92.0" fitWidth="97.0" layoutX="55.0" layoutY="375.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/food-menu-icon-3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView id="iconClean" fitHeight="92.0" fitWidth="84.0" layoutX="59.0" layoutY="505.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/clean.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblOrder" layoutX="987.0" layoutY="606.0" onMouseClicked="#tblrder_OnMouseClicked" prefHeight="309.0" prefWidth="906.0">
+         <columns>
+            <TableColumn minWidth="0.0" prefWidth="109.0" text="Item Code" />
+            <TableColumn minWidth="0.0" prefWidth="381.0" text="ItemDescription" />
+            <TableColumn minWidth="0.0" prefWidth="132.0" text="Order Qty" />
+            <TableColumn minWidth="0.0" prefWidth="118.0" text="Unite Price" />
+            <TableColumn minWidth="0.0" prefWidth="143.0" text="Total" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <TableView fx:id="tblCustomer" layoutX="1422.0" layoutY="164.0" onMouseClicked="#tblCustomers_OnMouseClicked" prefHeight="422.0" prefWidth="470.0">
+         <columns>
+            <TableColumn minWidth="0.0" prefWidth="148.0" text="CustomerId" />
+            <TableColumn minWidth="0.0" prefWidth="287.0" text="Name" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+   </children>
+</AnchorPane>

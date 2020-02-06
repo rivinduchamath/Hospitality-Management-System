@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane  fx:id="root" prefHeight="863.0" prefWidth="1685.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.deppo.hotelManagement.controller.RoomSelect">
+   <children>
+      <Label layoutX="785.0" layoutY="26.0" prefHeight="68.0" prefWidth="350.0" text="Room Details">
+         <font>
+            <Font name="Cambria Bold" size="56.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSearchRoom" labelFloat="true" layoutX="162.0" layoutY="51.0" onAction="#txtSearchRoomOnAction" onMouseClicked="#SearchGuest" prefHeight="31.0" prefWidth="409.0" promptText="Search Room :">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+      <Label fx:id="lblNoOfRooms" layoutX="1403.0" layoutY="46.0" prefHeight="40.0" prefWidth="128.0" text="No Of Rooms:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1522.0" layoutY="46.0" prefHeight="40.0" prefWidth="128.0" text="###########">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblSearchRoom" layoutX="34.0" layoutY="435.0" onMouseClicked="#tblCustomers_OnMouseClicked" prefHeight="419.0" prefWidth="1636.0">
+         <columns>
+            <TableColumn minWidth="0.0" prefWidth="199.99996948242188" text="Room No" />
+            <TableColumn minWidth="0.0" prefWidth="568.0" text="Type" />
+            <TableColumn minWidth="0.0" prefWidth="250.0" text="Price" />
+            <TableColumn minWidth="0.0" prefWidth="131.0" text="Catogary" />
+            <TableColumn minWidth="0.0" prefWidth="220.0" text="State" />
+            <TableColumn minWidth="0.0" prefWidth="241.0" text="Clean By" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <JFXTextField id="txtId" fx:id="txtRoomNo" layoutX="366.0" layoutY="235.0" onAction="#txtRoomNoOnAction" onMouseClicked="#searchGuestMouseClick" prefHeight="31.0" prefWidth="409.0" promptText="Room No :">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXComboBox id="comboRoomType" fx:id="comboRoomType" layoutX="1044.0" layoutY="235.0" onAction="#comboRoomTypeOnAction" prefHeight="31.0" prefWidth="395.0" promptText="Room Type" />
+      <JFXComboBox id="comboRoomNo" fx:id="comboRoomNo" editable="true" layoutX="366.0" layoutY="302.0" onAction="#comboRoomNoOnAction" prefHeight="31.0" prefWidth="417.0" promptText="Room Condition:" />
+      <JFXComboBox id="comboRoomType" fx:id="comboRoomPrice" layoutX="1044.0" layoutY="302.0" onAction="#comboRoomPriceOnAction" prefHeight="31.0" prefWidth="395.0" promptText="Room Price" />
+   </children>
+</AnchorPane>

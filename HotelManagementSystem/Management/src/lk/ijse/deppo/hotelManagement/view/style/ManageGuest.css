@@ -1,0 +1,11 @@
+#IconHome:hover{
+     -fx-effect: dropshadow(gaussian,green,20,0.0,0,0);
+ }
+
+
+#iconFandB:hover{
+    -fx-effect: dropshadow(gaussian,green,20,0.0,0,0);
+}
+#iconSetting:hover{
+    -fx-effect: dropshadow(gaussian,red,30,0.0,0,0);
+}

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="988.0" prefWidth="1920.0" stylesheets="@style/Manager.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.deppo.hotelManagement.controller.ManageControll">
+   <children>
+      <ImageView id="imgReserVation" fx:id="imgReservation" fitHeight="109.0" fitWidth="111.0" layoutX="50.0" layoutY="219.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/customers.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView id="IconHome" fx:id="imgHome" fitHeight="92.0" fitWidth="97.0" layoutX="58.0" layoutY="94.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home-icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView id="IconBanquet" fx:id="imgBanquet" fitHeight="75.0" fitWidth="92.0" layoutX="58.0" layoutY="434.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/wedding.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView id="iconClean" fx:id="imgHouseKeeping" fitHeight="92.0" fitWidth="97.0" layoutX="56.0" layoutY="685.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/clean.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView id="iconFoodAndBev" fx:id="imgFoodandBev" fitHeight="51.0" fitWidth="97.0" layoutX="56.0" layoutY="343.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/items.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="50.0" layoutY="29.0" prefHeight="31.0" prefWidth="276.0" text="System Management">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <ImageView id="iconMenu" fx:id="imgKitchenDep" fitHeight="92.0" fitWidth="97.0" layoutX="60.0" layoutY="543.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/food-menu-icon-3.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView id="iconAccountant" fx:id="imgAccount" fitHeight="92.0" fitWidth="97.0" layoutX="56.0" layoutY="818.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/acc.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton fx:id="btnFrontDesk" layoutX="381.0" layoutY="197.0" onAction="#btnFrontDeskOnAction" prefHeight="45.0" prefWidth="364.0" styleClass="backtoWhite" stylesheets="@style/Manager.css" text="Front Desk Management" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnAccountManagement" layoutX="381.0" layoutY="282.0" onAction="#btnAccountManagementOnAction" prefHeight="45.0" prefWidth="364.0" styleClass="backtoWhite" text="Account Management" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnFoodAndBev" layoutX="381.0" layoutY="368.0" onAction="#btnFoodAndBevOnAction" prefHeight="45.0" prefWidth="364.0" styleClass="backtoWhite" text="Food &amp; Bevarage" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnBanquet" layoutX="381.0" layoutY="449.0" onAction="#btnBanquetOnAction" prefHeight="45.0" prefWidth="364.0" styleClass="backtoWhite" text="Banquet Management" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnHouseKeeping" layoutX="381.0" layoutY="530.0" onAction="#btnHouseKeepingOnAction" prefHeight="45.0" prefWidth="364.0" styleClass="backtoWhite" text="House Keeping Management" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDailyActive" layoutX="381.0" layoutY="609.0" onAction="#btnDailyActiveOnActive" prefHeight="101.0" prefWidth="364.0" styleClass="backtoWhite" text="Daily Activity Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnMonthlyActive" layoutX="381.0" layoutY="752.0" onAction="#btnMonthlyActiveOnAction" prefHeight="101.0" prefWidth="364.0" styleClass="backtoWhite" text="Monthly Activity Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="1273.0" layoutY="553.0" prefHeight="35.0" prefWidth="174.0" text="Yesterday Income">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <PieChart fx:id="dailyIncomep" layoutX="1028.0" layoutY="570.0" prefHeight="399.0" prefWidth="663.0" />
+      <Label layoutX="1288.0" layoutY="88.0" prefHeight="35.0" prefWidth="137.0" text="Today Income">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <PieChart fx:id="dailyIncomep1" layoutX="1028.0" layoutY="105.0" prefHeight="388.0" prefWidth="663.0" />
+      <Separator layoutX="948.0" layoutY="530.0" prefHeight="5.0" prefWidth="823.0" style="-fx-background-color: black;" />
+   </children>
+</AnchorPane>

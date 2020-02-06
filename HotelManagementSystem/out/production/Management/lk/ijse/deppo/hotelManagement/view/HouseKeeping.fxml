@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="988.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.deppo.hotelManagement.controller.HouseKeeping">
+   <children>
+      <Label layoutX="378.0" layoutY="64.0" prefHeight="31.0" prefWidth="257.0" text="House Keeping">
+         <font>
+            <Font name="Cambria Bold" size="35.0" />
+         </font>
+      </Label>
+      <ImageView id="imgReserVation" fitHeight="109.0" fitWidth="111.0" layoutX="45.0" layoutY="156.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/customers.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblNoOfRooms" layoutX="1641.0" layoutY="46.0" prefHeight="40.0" prefWidth="128.0" text="No Of Rooms:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="nrooms" layoutX="1761.0" layoutY="46.0" prefHeight="40.0" prefWidth="128.0" text="###########">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblSearchRoom" layoutX="29.0" layoutY="577.0" onMouseClicked="#tblCustomers_OnMouseClicked" prefHeight="394.0" prefWidth="1885.0">
+         <columns>
+            <TableColumn minWidth="0.0" prefWidth="161.0" text="RoomId" />
+            <TableColumn minWidth="0.0" prefWidth="145.0" text="Category" />
+            <TableColumn minWidth="0.0" prefWidth="250.99996948242188" text="state" />
+            <TableColumn minWidth="0.0" prefWidth="779.0" text="type" />
+            <TableColumn minWidth="0.0" prefWidth="308.0" text="Checked By" />
+            <TableColumn minWidth="0.0" prefWidth="208.0" text="Date" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <JFXButton id="btnAdd" fx:id="btnAdd" layoutX="742.0" layoutY="494.0" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="173.0" style="-fx-background-color: navy blue;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="btnReset" fx:id="btnReset" layoutX="997.0" layoutY="494.0" onAction="#btnResetOnAction" prefHeight="40.0" prefWidth="173.0" style="-fx-background-color: gray;" text="Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField id="txtId" fx:id="txtCustomerId" layoutX="377.0" layoutY="220.0" onAction="#txtCustomerIdOnAction" onMouseClicked="#searchGuestMouseClick" prefHeight="31.0" prefWidth="409.0" promptText="Room Id:" style="-fx-font-weight: bold;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField id="txtRatePrice" fx:id="txtQtyOnHand" labelFloat="true" layoutX="1083.0" layoutY="287.0" onAction="#txtQtyOnHandOnAction" prefHeight="31.0" prefWidth="409.0" promptText="Type :" style="-fx-font-weight: bold;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+      <JFXDatePicker id="dateArival" fx:id="date" layoutX="378.0" layoutY="368.0" onAction="#dateOnAction" prefHeight="31.0" prefWidth="420.0" promptText="Date" style="-fx-font-weight: bold;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXDatePicker>
+      <JFXTextField id="txtId" fx:id="txtCustomerName" layoutX="1083.0" layoutY="368.0" onAction="#txtCustomerNameOnAction" onMouseClicked="#searchGuestMouseClick" prefHeight="31.0" prefWidth="409.0" promptText="Ckecked By;" style="-fx-font-weight: bold;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+      <ImageView id="IconHome" fitHeight="92.0" fitWidth="97.0" layoutX="50.0" layoutY="32.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView id="IconBanquet" fitHeight="75.0" fitWidth="92.0" layoutX="59.0" layoutY="368.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/wedding.png" />
+         </image>
+      </ImageView>
+      <ImageView id="iconMenu" fitHeight="92.0" fitWidth="84.0" layoutX="50.0" layoutY="488.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/food-menu-icon-3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView id="iconFoodAndBev" fitHeight="92.0" fitWidth="84.0" layoutX="54.0" layoutY="280.0" onMouseClicked="#IconNavigate" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/items.png" />
+         </image>
+      </ImageView>
+      <JFXComboBox fx:id="combostate" layoutX="377.0" layoutY="287.0" prefHeight="31.0" prefWidth="409.0" promptText="Room State:" style="-fx-font-weight: bold;" />
+      <JFXComboBox fx:id="roomCategory" layoutX="1083.0" layoutY="236.0" onAction="#roomCategoryOnAction" prefHeight="31.0" prefWidth="409.0" promptText="Catogory" style="-fx-font-weight: bold;" />
+   </children>
+</AnchorPane>

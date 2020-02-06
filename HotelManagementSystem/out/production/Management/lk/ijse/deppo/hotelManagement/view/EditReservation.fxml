@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="872.0" prefWidth="1731.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.deppo.hotelManagement.controller.EditReservation">
+   <children>
+      <Label layoutX="53.0" layoutY="57.0" prefHeight="38.0" prefWidth="257.0" text="Guest CheckOut&gt;&gt;">
+         <font>
+            <Font name="Cambria Bold" size="30.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSearch" labelFloat="true" layoutX="215.0" layoutY="184.0" onAction="#txtSearchOnAction" onMouseClicked="#SearchGuest" prefHeight="31.0" prefWidth="386.0" promptText="Search :" style="-fx-font-weight: bold;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXTextField>
+      <TableView fx:id="tblAllReserVationData" layoutX="747.0" layoutY="95.0" onMouseClicked="#tblCustomers_OnMouseClicked" prefHeight="438.0" prefWidth="970.0">
+         <columns>
+            <TableColumn minWidth="0.0" prefWidth="108.0" text="ReservationId" />
+            <TableColumn minWidth="0.0" prefWidth="213.0" text="GuestId" />
+            <TableColumn minWidth="0.0" prefWidth="202.0" text="Currency" />
+            <TableColumn minWidth="0.0" prefWidth="266.0" text="discount" />
+            <TableColumn minWidth="0.0" prefWidth="153.0" text="Total" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <JFXButton id="btnDelete" fx:id="btnCheckOut" layoutX="216.0" layoutY="324.0" onAction="#btnCheckOutOnaction" prefHeight="54.0" prefWidth="386.0" style="-fx-background-color: #66650A;" text="Check Out Guest" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <TableView id="tblReservation" fx:id="tblreservationall" layoutX="10.0" layoutY="539.0" onMouseClicked="#tblCustomers_OnMouseClicked2" prefHeight="324.0" prefWidth="1712.0">
+         <columns>
+            <TableColumn minWidth="0.0" prefWidth="142.0" text="Arival Date" />
+            <TableColumn minWidth="0.0" prefWidth="143.99996948242188" text="Depature Date" />
+            <TableColumn minWidth="0.0" prefWidth="359.0" text="Room Type" />
+            <TableColumn minWidth="0.0" prefWidth="94.0" text="Room No " />
+            <TableColumn minWidth="0.0" prefWidth="75.0" text="Adults" />
+            <TableColumn minWidth="0.0" text="Childrens" />
+            <TableColumn minWidth="0.0" prefWidth="179.0" text="Menu" />
+            <TableColumn minWidth="0.0" prefWidth="101.0" text="Discount" />
+            <TableColumn minWidth="0.0" prefWidth="216.0" text="RatePrice" />
+            <TableColumn minWidth="0.0" prefWidth="280.0" text="SubTotal" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+   </children>
+</AnchorPane>

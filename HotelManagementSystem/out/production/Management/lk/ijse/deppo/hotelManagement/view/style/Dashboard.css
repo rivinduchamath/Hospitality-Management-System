@@ -1,0 +1,21 @@
+
+.Iconhover:hover{
+    -fx-effect: dropshadow(gaussian,Green,40,0.0,0,0);
+}
+.IconhoverLogOut:hover{
+    -fx-effect: dropshadow(gaussian,red,80,0.85,0,1);
+}
+#logout{
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-border-radius: 5px;
+
+}
+#logout:hover{
+    -fx-effect: dropshadow(gaussian,red,40,0,1,0);
+}
+
+.Iconhover2:hover{
+    -fx-effect: dropshadow(gaussian,black,50,0.0,0,0);
+}
